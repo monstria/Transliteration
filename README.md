@@ -1,7 +1,8 @@
 # Transliteration VB.NET
 Tранслитация кирилицы в латиницу
 
-```Dim kText As String = "Привет мир"
+```Visual Basic .NET
+Dim kText As String = "Привет мир"
 Dim tr As New Transliteration.Translite
 
 ' с заменой пробелов
