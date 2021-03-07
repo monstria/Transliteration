@@ -9,8 +9,6 @@ Public Class Translite
 
     Private GOST_CHARS As New Dictionary(Of String, String) From {
         {"Є", "EH"},
-        {"І", "I"},
-        {"і", "i"},
         {"№", "#"},
         {"є", "eh"},
         {"А", "A"},
@@ -87,9 +85,7 @@ Public Class Translite
 
     Private ISO_CHARS As New Dictionary(Of String, String) From {
         {"Є", "YE"},
-        {"І", "I"},
         {"Ѓ", "G"},
-        {"і", "i"},
         {"№", "#"},
         {"є", "ye"},
         {"ѓ", "g"},
@@ -163,6 +159,32 @@ Public Class Translite
         {" ", "-"}
     }
 
+#Region "Property"
+
+    Private mWithoutSpace As Boolean = True
+
+    ''' <summary>
+    ''' Заменять пробелы на символ "-"
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property WithoutSpace As Boolean
+        Get
+            Return mWithoutSpace
+        End Get
+        Set(value As Boolean)
+            mWithoutSpace = value
+            If value Then
+                GOST_CHARS(" ") = "-"
+                ISO_CHARS(" ") = "-"
+            Else
+                GOST_CHARS(" ") = " "
+                ISO_CHARS(" ") = " "
+            End If
+        End Set
+    End Property
+
+#End Region
+
     ''' <summary>
     ''' Подготовка текста
     ''' </summary>
@@ -219,7 +241,9 @@ Public Class Translite
         Dim output As String = ValidateText(text)
         Dim d As Dictionary(Of String, String) = GetDictonaryByType(type)
         For Each item In d
-            output = output.Replace(item.Value, item.Key)
+            If item.Value IsNot Nothing AndAlso item.Value.Count Then
+                output = output.Replace(item.Value, item.Key)
+            End If
         Next
         Return output
     End Function

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Transliteration", "Transliteration\Transliteration.vbproj", "{B10F671B-BFF4-4F44-8495-9C9D602FF2F5}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Test", "Test\Test.vbproj", "{7D4076B5-E6C8-422C-AE70-2C9323F2BDB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B10F671B-BFF4-4F44-8495-9C9D602FF2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B10F671B-BFF4-4F44-8495-9C9D602FF2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B10F671B-BFF4-4F44-8495-9C9D602FF2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4076B5-E6C8-422C-AE70-2C9323F2BDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4076B5-E6C8-422C-AE70-2C9323F2BDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4076B5-E6C8-422C-AE70-2C9323F2BDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4076B5-E6C8-422C-AE70-2C9323F2BDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
