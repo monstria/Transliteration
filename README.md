@@ -1,7 +1,7 @@
 # Transliteration VB.NET
 Tранслитация кирилицы в латиницу
 
-```Visual Basic .NET
+```vb.net
 Dim kText As String = "Привет мир"
 Dim tr As New Transliteration.Translite
 
@@ -35,3 +35,4 @@ kText = tr.TransferToRus(tIso, Transliteration.Translite.TransliterationType.ISO
 'result: Привет мир
 kText = tr.TransferToRus(tGost, Transliteration.Translite.TransliterationType.GOST)
 'result: Привет мир
+```
